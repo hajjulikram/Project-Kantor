@@ -1,29 +1,159 @@
 {
-  "videos": [
+  "videoData": [
     {
-      "videoId": "nY2lQVaPpfU",
-      "videoName": "Random Video 1",
-      "videoDescription": "This is a random video."
+      "playlistId": 1,
+      "playlistName": "Asesi",
+      "videos": [
+        {
+          "videoId": "https://www.youtube.com/embed/gdrdZSKwStg",
+          "videoName": "Nusantara Sukses Teknologi",
+          "videoDescription": "This is a random video."
+        },
+        {
+          "videoId": "/assets/pdf/Profile.pdf",
+          "videoName": "Video Kedua Testing",
+          "videoDescription": "This is a random video."
+        },
+        {
+          "videoId": "https://www.youtube.com/embed/r6yU0M8WOM8",
+          "videoName": "Video Ketiga Testing",
+          "videoDescription": "This is a random video."
+        },
+        {
+          "videoId": "https://www.youtube.com/embed/P4bXkfrTiUE",
+          "videoName": "Video Keempat Testing ",
+          "videoDescription": "This is a random video."
+        },
+        {
+          "videoId": "https://www.youtube.com/embed/6cAJMxkdxcw",
+          "videoName": "Video Kelima Testing",
+          "videoDescription": "This is a random video."
+        }
+      ]
     },
     {
-      "videoId": "FROZvyKq_-g",
-      "videoName": "Random Video 2",
-      "videoDescription": "This is a random video."
+      "playlistId": 2,
+      "playlistName": "Asesor",
+      "videos": [
+        {
+          "videoId": "gdrdZSKwStg",
+          "videoName": "Nusantara Sukses Teknologi",
+          "videoDescription": "This is a random video."
+        },
+        {
+          "videoId": "FROZvyKq_-g",
+          "videoName": "Video Kedua Testing",
+          "videoDescription": "This is a random video."
+        },
+        {
+          "videoId": "r6yU0M8WOM8",
+          "videoName": "Video Ketiga Testing",
+          "videoDescription": "This is a random video."
+        },
+        {
+          "videoId": "P4bXkfrTiUE",
+          "videoName": "Video Keempat Testing ",
+          "videoDescription": "This is a random video."
+        },
+        {
+          "videoId": "6cAJMxkdxcw",
+          "videoName": "Video Kelima Testing",
+          "videoDescription": "This is a random video."
+        }
+      ]
     },
     {
-      "videoId": "r6yU0M8WOM8",
-      "videoName": "Random Video 2",
-      "videoDescription": "This is a random video."
+      "playlistId": 3,
+      "playlistName": "LSP",
+      "videos": [
+        {
+          "videoId": "gdrdZSKwStg",
+          "videoName": "Nusantara Sukses Teknologi",
+          "videoDescription": "This is a random video."
+        },
+        {
+          "videoId": "FROZvyKq_-g",
+          "videoName": "Video Kedua Testing",
+          "videoDescription": "This is a random video."
+        },
+        {
+          "videoId": "r6yU0M8WOM8",
+          "videoName": "Video Ketiga Testing",
+          "videoDescription": "This is a random video."
+        },
+        {
+          "videoId": "P4bXkfrTiUE",
+          "videoName": "Video Keempat Testing ",
+          "videoDescription": "This is a random video."
+        },
+        {
+          "videoId": "6cAJMxkdxcw",
+          "videoName": "Video Kelima Testing",
+          "videoDescription": "This is a random video."
+        }
+      ]
     },
     {
-      "videoId": "P4bXkfrTiUE",
-      "videoName": "Random Video 2",
-      "videoDescription": "This is a random video."
+      "playlistId": 4,
+      "playlistName": "Supervisor",
+      "videos": [
+        {
+          "videoId": "https://www.youtube.com/embed/gdrdZSKwStg",
+          "videoName": "Nusantara Sukses Teknologi",
+          "videoDescription": "This is a random video."
+        },
+        {
+          "videoId": "/assets/pdf/Profile.pdf",
+          "videoName": "Video Kedua Testing",
+          "videoDescription": "This is a random video."
+        },
+        {
+          "videoId": "https://www.youtube.com/embed/r6yU0M8WOM8",
+          "videoName": "Video Ketiga Testing",
+          "videoDescription": "This is a random video."
+        },
+        {
+          "videoId": "https://www.youtube.com/embed/P4bXkfrTiUE",
+          "videoName": "Video Keempat Testing ",
+          "videoDescription": "This is a random video."
+        },
+        {
+          "videoId": "https://www.youtube.com/embed/6cAJMxkdxcw",
+          "videoName": "Video Kelima Testing",
+          "videoDescription": "This is a random video."
+        }
+      ]
     },
     {
-      "videoId": "6cAJMxkdxcw",
-      "videoName": "Random Video 2",
-      "videoDescription": "This is a random video."
+      "playlistId": 5,
+      "playlistName": "Asessment",
+      "videos": [
+        {
+          "videoId": "gdrdZSKwStg",
+          "videoName": "Nusantara Sukses Teknologi",
+          "videoDescription": "This is a random video."
+        },
+        {
+          "videoId": "FROZvyKq_-g",
+          "videoName": "Video Kedua Testing",
+          "videoDescription": "This is a random video."
+        },
+        {
+          "videoId": "r6yU0M8WOM8",
+          "videoName": "Video Ketiga Testing",
+          "videoDescription": "This is a random video."
+        },
+        {
+          "videoId": "P4bXkfrTiUE",
+          "videoName": "Video Keempat Testing ",
+          "videoDescription": "This is a random video."
+        },
+        {
+          "videoId": "6cAJMxkdxcw",
+          "videoName": "Video Kelima Testing",
+          "videoDescription": "This is a random video."
+        }
+      ]
     }
   ]
 }

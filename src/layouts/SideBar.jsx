@@ -2,12 +2,17 @@
 
 import React, { useState, useEffect } from "react";
 import Icon from "@mdi/react";
-import { mdiMenu, mdiBackburger, mdiPlayCircle } from "@mdi/js";
+import { mdiMenu, mdiFilePdfBox, mdiBackburger, mdiPlayCircle } from "@mdi/js";
 import { initDropdowns, initAccordions } from "flowbite";
 import dataExample from "@/data/dataExample.json";
 import Link from "next/link";
+import Image from "next/image";
+import { useDispatch, useSelector } from "react-redux";
+import { setVideoLink, setVideoName } from "@/stores/reducers/videoSlice";
 
 const SideBar = ({ title, children }) => {
+  const video_link = useSelector((state) => state.video.videoLink);
+  const dispatch = useDispatch();
   const [showSidebar, setShowSidebar] = useState(true);
   useEffect(() => {
     if (window.innerWidth < 900) {
@@ -22,14 +27,15 @@ const SideBar = ({ title, children }) => {
     });
     setTimeout(() => {
       initDropdowns();
-      initAccordions();
     }, 1000);
+    initAccordions();
   }, []);
 
-  const handleCloseSidebar = () => {
-    if (window.innerWidth > 1024) return;
-    setShowSidebar(false);
-  };
+  // const handleCloseSidebar = (name, link) => {
+  //   if (window.innerWidth > 1024) return;
+  //   setShowSidebar(false);
+
+  // };
 
   return (
     <>
@@ -42,7 +48,16 @@ const SideBar = ({ title, children }) => {
               className="w-6 h-6"
             />
           </button>
-          <h1>Hajul Ikram</h1>
+          {/* <h1>Hajjul Ikram</h1> */}
+          <Link href={"/"}>
+            <Image
+              className="ml-3"
+              src="/logo NAS.png"
+              alt="Logo NAS"
+              width={80}
+              height={80}
+            />
+          </Link>
         </div>
         <div>
           <div className="flex items-center gap-2">
@@ -59,13 +74,13 @@ const SideBar = ({ title, children }) => {
       </nav>
       <aside
         id="logo-sidebar"
-        className={`pt-12 fixed top-0 z-40 left-0 w-64 shadow-md shadow-black h-screen transition-transform duration-1000 ${
+        className={`pt-12 fixed top-0 z-40 bg-white left-0 w-64 shadow-md shadow-black h-screen transition-transform duration-1000 ${
           showSidebar ? "translate-x-0" : "-translate-x-full"
         }`}
       >
         <div className=" flex gap-4 items-center px-5 my-5 sticky top-0 shadow-sm border-b">
-          <div>
-            <img src="/vercel.svg" alt="" className="h-16 w-16 rounded-full" />
+          <div className="mb-2">
+            <img src="/Asset-1.png" alt="" className="h-14 w-16 rounded-full" />
           </div>
           <div className="w-2/3">
             <h1 className="font-bold">Playlist Title</h1>
@@ -74,192 +89,90 @@ const SideBar = ({ title, children }) => {
         </div>
 
         <div className="h-full px-5 -mt-5 py-5 pb-4 overflow-y-auto">
-          <div className="text-gray-600">
-            <h2 className="text-lg font-bold">Video</h2>
+          <div className="text-black">
+            {/* <h2 className="text-lg font-bold">Video</h2> */}
             <div
               id="accordion-flush"
               data-accordion="collapse"
               data-active-classes="bg-white dark:bg-gray-900 text-gray-900 dark:text-white"
-              data-inactive-classes="text-gray-500 dark:text-gray-400"
+              data-inactive-classes="text-gray-500 dark:text-gray-400 my-5"
             >
-              <>
-                <h2 id="accordion-flush-heading-1">
-                  <button
-                    type="button"
-                    className="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400"
-                    data-accordion-target="#accordion-flush-body-1"
-                    aria-expanded="true"
-                    aria-controls="accordion-flush-body-1"
-                  >
-                    <span>Judul Video</span>
-                    <svg
-                      data-accordion-icon
-                      className="w-3 h-3 rotate-180 shrink-0"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 10 6"
+              {dataExample &&
+                dataExample.videoData.map((item) => (
+                  <>
+                    <h2
+                      id={`accordion-flush-heading-${item.playlistId}`}
+                      key={item.playlistId}
                     >
-                      <path
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M9 5 5 1 1 5"
-                      />
-                    </svg>
-                  </button>
-                </h2>
-                <div
-                  id="accordion-flush-body-1"
-                  className="hidden"
-                  aria-labelledby="accordion-flush-heading-1"
-                >
-                  <div className="py-5 border-b border-gray-200 dark:border-gray-700">
-                    <ul className="flex flex-col gap-2">
-                      {dataExample.videos &&
-                        dataExample.videos.map((item) => (
-                          <Link href={`/playlist/video/${item.videoId}`}>
+                      <button
+                        type="button"
+                        className="flex px-3 !bg-[#E5E9F2] rounded-xl items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400"
+                        data-accordion-target={`#accordion-flush-body-${item.playlistId}`}
+                        aria-expanded="true"
+                        aria-controls={`accordion-flush-body-${item.playlistId}`}
+                      >
+                        <span>{item.playlistName}</span>
+                        <svg
+                          data-accordion-icon
+                          className="w-3 h-3 rotate-180 shrink-0"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 10 6"
+                        >
+                          <path
+                            stroke="currentColor"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="M9 5 5 1 1 5"
+                          />
+                        </svg>
+                      </button>
+                    </h2>
+                    <div
+                      id={`accordion-flush-body-${item.playlistId}`}
+                      className="hidden bg-[#E5E9F2] rounded-b-xl px-2 -mt-3"
+                      aria-labelledby={`accordion-flush-heading-${item.playlistId}`}
+                    >
+                      <div className="py-5 dark:border-gray-700">
+                        <ul className="flex  text-xs font-medium flex-col gap-2">
+                          {item.videos.map((videoList) => (
                             <li
-                              className=" flex gap-2 items-center text-black py-3 hover:text-[#1B8CCE] cursor-pointer"
-                              key={item?.videoId}
+                              onClick={() => {
+                                dispatch(setVideoLink(videoList?.videoId));
+                                dispatch(setVideoName(videoList?.videoName));
+                              }}
+                              className={`${
+                                video_link === videoList?.videoId
+                                  ? "bg-[#1B8CCE] text-white "
+                                  : "bg-white text-black hover:text-[#1B8CCE]"
+                              } rounded-full px-2 flex gap-2 items-center  py-3  cursor-pointer`}
+                              key={videoList?.videoId}
                             >
-                              <Icon
-                                path={mdiPlayCircle}
-                                size={2}
-                                className="h-10 w-10"
-                              />
-                              {item?.videoName}
+                              <div>
+                                {videoList?.videoId.endsWith(".pdf") ? (
+                                  <Icon
+                                    path={mdiFilePdfBox}
+                                    size={1}
+                                    className="h-10 w-10"
+                                  />
+                                ) : (
+                                  <Icon
+                                    path={mdiPlayCircle}
+                                    size={1}
+                                    className="h-10 w-10"
+                                  />
+                                )}
+                              </div>
+                              <span>{videoList?.videoName}</span>
                             </li>
-                          </Link>
-                        ))}
-                    </ul>
-                  </div>
-                </div>
-              </>
-
-              <h2 id="accordion-flush-heading-2">
-                <button
-                  type="button"
-                  className="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400"
-                  data-accordion-target="#accordion-flush-body-2"
-                  aria-expanded="false"
-                  aria-controls="accordion-flush-body-2"
-                >
-                  <span>Is there a Figma file available?</span>
-                  <svg
-                    data-accordion-icon
-                    className="w-3 h-3 rotate-180 shrink-0"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 10 6"
-                  >
-                    <path
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M9 5 5 1 1 5"
-                    />
-                  </svg>
-                </button>
-              </h2>
-              <div
-                id="accordion-flush-body-2"
-                className="hidden"
-                aria-labelledby="accordion-flush-heading-2"
-              >
-                <div className="py-5 border-b border-gray-200 dark:border-gray-700">
-                  <p className="mb-2 text-gray-500 dark:text-gray-400">
-                    Flowbite is first conceptualized and designed using the
-                    Figma software so everything you see in the library has a
-                    design equivalent in our Figma file.
-                  </p>
-                  <p className="text-gray-500 dark:text-gray-400">
-                    Check out the{" "}
-                    <a
-                      href="https://flowbite.com/figma/"
-                      className="text-blue-600 dark:text-blue-500 hover:underline"
-                    >
-                      Figma design system
-                    </a>{" "}
-                    based on the utility classNamees from Tailwind CSS and
-                    components from Flowbite.
-                  </p>
-                </div>
-              </div>
-              <h2 id="accordion-flush-heading-3">
-                <button
-                  type="button"
-                  className="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400"
-                  data-accordion-target="#accordion-flush-body-3"
-                  aria-expanded="false"
-                  aria-controls="accordion-flush-body-3"
-                >
-                  <span>
-                    What are the differences between Flowbite and Tailwind UI?
-                  </span>
-                  <svg
-                    data-accordion-icon
-                    className="w-3 h-3 rotate-180 shrink-0"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 10 6"
-                  >
-                    <path
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M9 5 5 1 1 5"
-                    />
-                  </svg>
-                </button>
-              </h2>
-              <div
-                id="accordion-flush-body-3"
-                className="hidden"
-                aria-labelledby="accordion-flush-heading-3"
-              >
-                <div className="py-5 border-b border-gray-200 dark:border-gray-700">
-                  <p className="mb-2 text-gray-500 dark:text-gray-400">
-                    The main difference is that the core components from
-                    Flowbite are open source under the MIT license, whereas
-                    Tailwind UI is a paid product. Another difference is that
-                    Flowbite relies on smaller and standalone components,
-                    whereas Tailwind UI offers sections of pages.
-                  </p>
-                  <p className="mb-2 text-gray-500 dark:text-gray-400">
-                    However, we actually recommend using both Flowbite, Flowbite
-                    Pro, and even Tailwind UI as there is no technical reason
-                    stopping you from using the best of two worlds.
-                  </p>
-                  <p className="mb-2 text-gray-500 dark:text-gray-400">
-                    Learn more about these technologies:
-                  </p>
-                  <ul className="pl-5 text-gray-500 list-disc dark:text-gray-400">
-                    <li>
-                      <a
-                        href="https://flowbite.com/pro/"
-                        className="text-blue-600 dark:text-blue-500 hover:underline"
-                      >
-                        Flowbite Pro
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://tailwindui.com/"
-                        rel="nofollow"
-                        className="text-blue-600 dark:text-blue-500 hover:underline"
-                      >
-                        Tailwind UI
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  </>
+                ))}
             </div>
           </div>
         </div>
