@@ -5,28 +5,18 @@
       "playlistName": "Asesi",
       "videos": [
         {
-          "videoId": "https://www.youtube.com/embed/gdrdZSKwStg",
-          "videoName": "Nusantara Sukses Teknologi",
+          "videoId": "https://www.youtube.com/embed/OQxDMh-sO5o?controls=0&showinfo=0&rel=0",
+          "videoName": "Proses Registrasi Calon Asesi",
           "videoDescription": "This is a random video."
         },
         {
-          "videoId": "/assets/pdf/Profile.pdf",
-          "videoName": "Video Kedua Testing",
+          "videoId": "https://www.youtube.com/embed/i1RalrAP8eY?controls=0&showinfo=0&rel=0",
+          "videoName": "Proses Pengajuan Skema dan Permohonan Sertifikasi Calon Asesi",
           "videoDescription": "This is a random video."
         },
         {
-          "videoId": "https://www.youtube.com/embed/r6yU0M8WOM8",
-          "videoName": "Video Ketiga Testing",
-          "videoDescription": "This is a random video."
-        },
-        {
-          "videoId": "https://www.youtube.com/embed/P4bXkfrTiUE",
-          "videoName": "Video Keempat Testing ",
-          "videoDescription": "This is a random video."
-        },
-        {
-          "videoId": "https://www.youtube.com/embed/6cAJMxkdxcw",
-          "videoName": "Video Kelima Testing",
+          "videoId": "https://www.youtube.com/embed/rxGNfK1Lhms?controls=0&showinfo=0&rel=0",
+          "videoName": "Asesi Mengisi dan Menandatangani Persetujuan Asesmen FR.AK-01",
           "videoDescription": "This is a random video."
         }
       ]
@@ -36,121 +26,34 @@
       "playlistName": "Asesor",
       "videos": [
         {
-          "videoId": "gdrdZSKwStg",
-          "videoName": "Nusantara Sukses Teknologi",
-          "videoDescription": "This is a random video."
-        },
-        {
-          "videoId": "FROZvyKq_-g",
-          "videoName": "Video Kedua Testing",
-          "videoDescription": "This is a random video."
-        },
-        {
-          "videoId": "r6yU0M8WOM8",
-          "videoName": "Video Ketiga Testing",
-          "videoDescription": "This is a random video."
-        },
-        {
-          "videoId": "P4bXkfrTiUE",
-          "videoName": "Video Keempat Testing ",
-          "videoDescription": "This is a random video."
-        },
-        {
-          "videoId": "6cAJMxkdxcw",
-          "videoName": "Video Kelima Testing",
+          "videoId": "https://www.youtube.com/embed/ktMvx3NsVgA?controls=0&showinfo=0&rel=0",
+          "videoName": "Verifikasi Berkas dan Penentuan Metode Uji Kompetensi oleh Asesor",
           "videoDescription": "This is a random video."
         }
       ]
     },
     {
       "playlistId": 3,
-      "playlistName": "LSP",
+      "playlistName": "Admin LSP",
       "videos": [
         {
-          "videoId": "gdrdZSKwStg",
-          "videoName": "Nusantara Sukses Teknologi",
+          "videoId": "https://www.youtube.com/embed/i5Cauo8OkkM?controls=0&showinfo=0&rel=0",
+          "videoName": "Verifikasi Data Pemohon Oleh Admin LSP",
           "videoDescription": "This is a random video."
         },
         {
-          "videoId": "FROZvyKq_-g",
-          "videoName": "Video Kedua Testing",
+          "videoId": "https://www.youtube.com/embed/rdHtRK43HV0?controls=0&showinfo=0&rel=0",
+          "videoName": "Membuat Jadwal Asesmen oleh Admin LSP",
           "videoDescription": "This is a random video."
         },
         {
-          "videoId": "r6yU0M8WOM8",
-          "videoName": "Video Ketiga Testing",
+          "videoId": "https://www.youtube.com/embed/kdEn_tqV354?controls=0&showinfo=0&rel=0",
+          "videoName": "Menetapkan Asesi pada Kegiatan Asesmen oleh Admin LSP",
           "videoDescription": "This is a random video."
         },
         {
-          "videoId": "P4bXkfrTiUE",
-          "videoName": "Video Keempat Testing ",
-          "videoDescription": "This is a random video."
-        },
-        {
-          "videoId": "6cAJMxkdxcw",
-          "videoName": "Video Kelima Testing",
-          "videoDescription": "This is a random video."
-        }
-      ]
-    },
-    {
-      "playlistId": 4,
-      "playlistName": "Supervisor",
-      "videos": [
-        {
-          "videoId": "https://www.youtube.com/embed/gdrdZSKwStg",
-          "videoName": "Nusantara Sukses Teknologi",
-          "videoDescription": "This is a random video."
-        },
-        {
-          "videoId": "/assets/pdf/Profile.pdf",
-          "videoName": "Video Kedua Testing",
-          "videoDescription": "This is a random video."
-        },
-        {
-          "videoId": "https://www.youtube.com/embed/r6yU0M8WOM8",
-          "videoName": "Video Ketiga Testing",
-          "videoDescription": "This is a random video."
-        },
-        {
-          "videoId": "https://www.youtube.com/embed/P4bXkfrTiUE",
-          "videoName": "Video Keempat Testing ",
-          "videoDescription": "This is a random video."
-        },
-        {
-          "videoId": "https://www.youtube.com/embed/6cAJMxkdxcw",
-          "videoName": "Video Kelima Testing",
-          "videoDescription": "This is a random video."
-        }
-      ]
-    },
-    {
-      "playlistId": 5,
-      "playlistName": "Asessment",
-      "videos": [
-        {
-          "videoId": "gdrdZSKwStg",
-          "videoName": "Nusantara Sukses Teknologi",
-          "videoDescription": "This is a random video."
-        },
-        {
-          "videoId": "FROZvyKq_-g",
-          "videoName": "Video Kedua Testing",
-          "videoDescription": "This is a random video."
-        },
-        {
-          "videoId": "r6yU0M8WOM8",
-          "videoName": "Video Ketiga Testing",
-          "videoDescription": "This is a random video."
-        },
-        {
-          "videoId": "P4bXkfrTiUE",
-          "videoName": "Video Keempat Testing ",
-          "videoDescription": "This is a random video."
-        },
-        {
-          "videoId": "6cAJMxkdxcw",
-          "videoName": "Video Kelima Testing",
+          "videoId": "https://www.youtube.com/embed/yrLl6ldKhjM?controls=0&showinfo=0&rel=0",
+          "videoName": "Menetapkan Asesor pada Kegiatan Asesmen oleh Admin LSP",
           "videoDescription": "This is a random video."
         }
       ]

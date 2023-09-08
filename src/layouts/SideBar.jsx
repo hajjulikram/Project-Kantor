@@ -9,6 +9,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { useDispatch, useSelector } from "react-redux";
 import { setVideoLink, setVideoName } from "@/stores/reducers/videoSlice";
+import Logo from "../../public/assets/images/Logo NAS.png";
+import logoSidebar from "../../public/assets/images/Asset-1.png";
 
 const SideBar = ({ title, children }) => {
   const video_link = useSelector((state) => state.video.videoLink);
@@ -52,8 +54,8 @@ const SideBar = ({ title, children }) => {
           <Link href={"/"}>
             <Image
               className="ml-3"
-              src="/logo NAS.png"
-              alt="Logo NAS"
+              src={Logo}
+              alt="NAS"
               width={80}
               height={80}
             />
@@ -80,11 +82,15 @@ const SideBar = ({ title, children }) => {
       >
         <div className=" flex gap-4 items-center px-5 my-5 sticky top-0 shadow-sm border-b">
           <div className="mb-2">
-            <img src="/Asset-1.png" alt="" className="h-14 w-16 rounded-full" />
+            <Image
+              src={logoSidebar}
+              alt=""
+              className="h-14 w-16 rounded-full"
+            />
           </div>
           <div className="w-2/3">
-            <h1 className="font-bold">Playlist Title</h1>
-            <p className="text-gray-600 text-xs">Description Title</p>
+            <h1 className="font-bold">Playlist NAS</h1>
+            <p className="text-gray-600 text-xs">Tutorial Playlist</p>
           </div>
         </div>
 

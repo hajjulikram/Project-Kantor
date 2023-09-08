@@ -1,8 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit"; // createSlice ini adalah fungsi yang digunakan untuk membuat reducer dan action secara otomatis
 
 const initialState = {
-  videoName: "Nusantara Sukses Teknologi", // default value
-  videoLink: "https://www.youtube.com/embed/gdrdZSKwStg",
+  videoName: "Proses Registrasi Calon Asesi", // default value
+  videoLink: "https://www.youtube.com/embed/OQxDMh-sO5o",
 };
 
 const videoSlice = createSlice({
